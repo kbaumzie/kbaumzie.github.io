@@ -1,0 +1,17 @@
+/* A main stylesheet that maintains the theme of my page */
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,100i,400');
+
+body {
+  font-family: 'Raleway';
+}
+
+#introduction {
+  text-align: center;
+  padding: 5%;
+}
+
+.me {
+  height: 25%;
+  width: 25%;
+}
