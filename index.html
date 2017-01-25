@@ -4,6 +4,8 @@
 <html>
   <head>
 
+    <meta charset="UTF-8">
+
     <title>Kayla Nussbaum</title>
 
     <!--Import Google Icon Font-->
@@ -14,9 +16,10 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/stylesheets/theme.css">
+    <link rel="stylesheet" href="http://d2v52k3cl9vedd.cloudfront.net/vhs/0.1.0/vhs.min.css">
 
     <!-- Favicon -->
-    <!--<link rel="icon" type="image/png" href="/favicon.png" />-->
+    <link rel="icon" type="image/png" href="/images/favicon.png">
 
   </head>
 
@@ -24,13 +27,46 @@
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+    <script type="text/javascript" src="/javascript/console.js"></script>
+    <script>
+    $(document).ready(function(){
+      $('.parallax').parallax();
+    });
+    </script>
 
-    <div id="introduction" class="pink lighten-5">
-      <h4>Kayla Nussbaum</h4>
-      <div style="margin: auto;">
-        <img class="me z-depth-4 circle responsive-img" src="/images/me.jpg">
-      </div>
-      <h6><i>Hello world, I am a passionate software developer from Poconos, PA.</i></h6>
+    <!--
+    <div class="parallax-container">
+      <div class="parallax"><img src="/images/stars.gif"></div>
     </div>
+  -->
+  
+    <div id="introduction" class="pink lighten-5">
+      <div class="fixed-action-btn vertical">
+        <a class="btn-floating btn-large red">
+          <i class="large material-icons">face</i>
+        </a>
+        <ul>
+          <li><a class="btn-floating red"><i class="material-icons">call</i></a></li>
+          <li><a class="btn-floating yellow darken-1"><i class="material-icons">email</i></a></li>
+          <li><a class="btn-floating green"><i class="material-icons">description</i></a></li>
+          <li><a class="btn-floating orange"><img src="/images/github.png" id="navicon-git"></a></li>
+          <li><a class="btn-floating blue"><img src="/images/linkedin.png" id="navicon-in"></a></li>
+        </ul>
+      </div>
+      <h4 class="vhs-top js-demo">Kayla Nussbaum</h4>
+      <div style="margin: auto;">
+        <img class="z-depth-4 circle responsive-img" id="me" src="/images/me.jpg">
+      </div>
+      <h6 class="vhs-top js-demo vhs-delay-2"><i>Hello world, I am a passionate software engineer from Poconos, PA.</i></h6>
+    </div>
+
+    <div id="mybackground" class="blue-grey lighten-1">
+      <h4>Hello</h4>
+    </div>
+    <!--
+    <div class="parallax-container">
+      <div class="parallax"><img src="/images/stars.gif"></div>
+    </div>
+  -->
   </body>
 </html>

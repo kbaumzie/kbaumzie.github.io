@@ -11,7 +11,26 @@ body {
   padding: 5%;
 }
 
-.me {
+#me {
   height: 25%;
   width: 25%;
+}
+
+#navicon-in {
+  height: 30%;
+  width: 30%;
+}
+
+#navicon-git {
+  height: 50%;
+  width: 50%;
+  margin-top: 25%;
+}
+
+#mybackground {
+  margin-top: -30px;
+}
+
+.parallax-container {
+  height: "100px";
 }
