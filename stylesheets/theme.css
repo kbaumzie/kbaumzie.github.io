@@ -2,9 +2,13 @@
 
 @import url('https://fonts.googleapis.com/css?family=Raleway:100,100i,400');
 
+/* HTML formatting */
+
 body {
   font-family: 'Raleway';
 }
+
+/* Main sections of personal content */
 
 #introduction {
   text-align: center;
@@ -27,10 +31,19 @@ body {
   margin-top: 25%;
 }
 
-#mybackground {
-  margin-top: -30px;
+#mybackground h4 {
+  margin-top: 0px;
+  text-align: center;
 }
 
+#myexperience h4 {
+  margin-top: 0px;
+  text-align: center;
+}
+
+
+/* Images and others */
+
 .parallax-container {
-  height: "100px";
+  height: 150px;
 }
