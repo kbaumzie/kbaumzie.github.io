@@ -6,6 +6,13 @@
 
 body {
   font-family: 'Raleway';
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
 }
 
 /* Main sections of personal content */
@@ -41,6 +48,20 @@ body {
   text-align: center;
 }
 
+#myeducation h4 {
+  margin-top: 0px;
+  text-align: center;
+}
+
+#myprojects h4 {
+  margin-top: 0px;
+  text-align: center;
+}
+
+#myresume h4 {
+  margin-top: 0px;
+  text-align: center;
+}
 
 /* Images and others */
 

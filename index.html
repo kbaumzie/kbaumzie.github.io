@@ -28,9 +28,12 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
     <script type="text/javascript" src="/javascript/console.js"></script>
+    <script type="text/javascript" src="/javascript/replacement_helper.js"></script>
     <script>
     $(document).ready(function(){
       $('.parallax').parallax();
+      // $(document).onload(<<load the intro content and the console content>>);
+      // hide other divs than the above
     });
     </script>
 
@@ -58,17 +61,61 @@
       <h6 class="vhs-top vhs-delay-2"><i>Hello world, I am a passionate software engineer from Pocono Mountains, PA.</i></h6>
     </div>
 
+    <!-- once I get this down, replace with a navigation bar -->
+    <button onclick="replaceContent('dynamicContent', 'myexperience')" class="button">Experience Content</button>
+
+    <div id="dynamicContent" class="deep-purple lighten-3"></div>
+
     <div id="mybackground" class="blue-grey lighten-1">
-      <h4>"Insert Console Here"</h4>
+      <h4>Insert Console Here</h4>
     </div>
 
     <div id="myexperience" class="orange lighten-4">
-      <h4>"Here is some recent work experience"</h4>
+      <h4>Here is some recent work experience</h4>
+    </div>
+
+    <div id="myeducation" class="orange lighten-2">
+      <h4>This is where I've gone to school</h4>
+    </div>
+
+    <div id="myprojects" class="orange lighten-1">
+      <h4>Some projects I'm working on</h4>
+    </div>
+
+    <div id="myresume" class="yello darken-2">
+      <h4>Instant resume download or pdf view of resume?</h4>
     </div>
 
     <div class="parallax-container">
       <div class="parallax"><img src="/images/Yosemite.jpg"></div>
     </div>
+
+    <footer class="page-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Get in touch</h5>
+            <p class="grey-text text-lighten-4">Thank you for visiting my page
+            and for considering me for a position at your company.</p>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Contact</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3" href="#!">Call me ;)</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Git me ;)</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Link me ;)</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Mail me ;)</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+        © 2017 Copyright Kayla Nussbaum
+        <a class="grey-text text-lighten-4 right" href="#!">Cheers!</a>
+        </div>
+      </div>
+    </footer>
 
   </body>
 </html>
