@@ -31,15 +31,10 @@
     <script type="text/javascript" src="/javascript/replacement_helper.js"></script>
     <script>
     $(document).ready(function(){
-      $('.parallax').parallax();
       // $(document).onload(<<load the intro content and the console content>>);
       // hide other divs than the above
     });
     </script>
-
-    <div class="parallax-container">
-      <div class="parallax"><img src="/images/Yosemite.jpg"></div>
-    </div>
 
     <div id="introduction" class="red lighten-5">
       <div class="fixed-action-btn vertical">
@@ -54,6 +49,7 @@
           <li><a class="btn-floating orange darken-2"><i class="material-icons">description</i></a></li>
         </ul>
       </div>
+
       <h4 class="vhs-top">Kayla Nussbaum</h4>
       <div style="margin: auto;" class="vhs-fade vhs-delay-3 vhs-duration-4">
         <img class="z-depth-4 circle responsive-img" id="me" src="/images/me.jpg">
@@ -61,33 +57,36 @@
       <h6 class="vhs-top vhs-delay-2"><i>Hello world, I am a passionate software engineer from Pocono Mountains, PA.</i></h6>
     </div>
 
-    <!-- once I get this down, replace with a navigation bar -->
-    <button onclick="replaceContent('dynamicContent', 'myexperience')" class="button">Experience Content</button>
+    <nav id="mynav" class="nav-extended">
+      <div class="nav-content">
+        <ul class="tabs tabs-transparent">
+          <li class="tab"><a class="active" href="#mybackground">About</a></li>
+          <li class="tab"><a href="#myexperience">Experience</a></li>
+          <li class="tab"><a href="#myeducation">Education</a></li>
+          <li class="tab"><a href="#myprojects">Projects</a></li>
+          <li class="tab"><a href="#myresume">Resume</a></li>
+        </ul>
+      </div>
+    </nav>
 
-    <div id="dynamicContent" class="deep-purple lighten-3"></div>
-
-    <div id="mybackground" class="blue-grey lighten-1">
+    <div id="mybackground" class="col s12 blue-grey lighten-1">
       <h4>Insert Console Here</h4>
     </div>
 
-    <div id="myexperience" class="orange lighten-4">
+    <div id="myexperience" class="col s12 orange lighten-4">
       <h4>Here is some recent work experience</h4>
     </div>
 
-    <div id="myeducation" class="orange lighten-2">
+    <div id="myeducation" class="col s12 orange lighten-2">
       <h4>This is where I've gone to school</h4>
     </div>
 
-    <div id="myprojects" class="orange lighten-1">
+    <div id="myprojects" class="col s12 orange lighten-1">
       <h4>Some projects I'm working on</h4>
     </div>
 
-    <div id="myresume" class="yello darken-2">
+    <div id="myresume" class="col s12 yellow darken-2">
       <h4>Instant resume download or pdf view of resume?</h4>
-    </div>
-
-    <div class="parallax-container">
-      <div class="parallax"><img src="/images/Yosemite.jpg"></div>
     </div>
 
     <footer class="page-footer">
@@ -112,7 +111,6 @@
       <div class="footer-copyright">
         <div class="container">
         © 2017 Copyright Kayla Nussbaum
-        <a class="grey-text text-lighten-4 right" href="#!">Cheers!</a>
         </div>
       </div>
     </footer>

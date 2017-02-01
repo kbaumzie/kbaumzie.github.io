@@ -22,6 +22,12 @@ main {
   padding: 5%;
 }
 
+#mynav {
+  background-color: #ffebee;
+  box-shadow: 0 0 0 0;
+  color: #424242;
+}
+
 #me {
   height: 25%;
   width: 25%;
