@@ -15,6 +15,10 @@ h4 {
   text-align: center;
 }
 
+h6 {
+  text-align: center;
+}
+
 main {
   flex: 1 0 auto;
 }
@@ -65,7 +69,17 @@ main {
 }
 
 #resume {
+  padding: 5%;
+}
 
+#resumeDescription {
+  font-style: italic;
+  padding-bottom: 2%;
+  margin-top: 0;
+}
+
+#footerContent a:hover{
+  color: #9acde6 !important;
 }
 
 /* Overwrite Materialize CSS */

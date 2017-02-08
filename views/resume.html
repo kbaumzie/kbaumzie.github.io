@@ -1,10 +1,12 @@
 <script src="/javascript/pdfobject.min.js"></script>
 <script>PDFObject.embed("/assets/pdf/nussbaum_resume.pdf", "#resumePDF");</script>
 <style>
-.pdfobject-container { height: 500px;}
-.pdfobject { border: 1px solid #666; }
+  .pdfobject-container { height: 500px; }
+  .pdfobject { border: 1px solid #666; }
 </style>
 
-<h4>Instant resume download or pdf view of resume?</h4>
+<h6 id="resumeDescription">This is my most current resume as of February 8th, 2016.</h6>
 
-<div id="resumePDF"></div>
+<div id="resumeContainer">
+  <div id="resumePDF"></div>
+</div>
