@@ -11,6 +11,10 @@ body {
   flex-direction: column;
 }
 
+h4 {
+  text-align: center;
+}
+
 main {
   flex: 1 0 auto;
 }
@@ -19,18 +23,18 @@ main {
 
 #introduction {
   text-align: center;
-  padding: 5%;
+  padding: 2%;
 }
 
-#mynav {
-  background-color: #ffebee;
-  box-shadow: 0 0 0 0;
+.tabs {
+  background-color: #ffebee !important;
+  box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.20);
   color: #424242;
 }
 
 #me {
-  height: 25%;
-  width: 25%;
+  height: 20%;
+  width: 20%;
 }
 
 #navicon-in {
@@ -44,32 +48,32 @@ main {
   margin-top: 25%;
 }
 
-#mybackground h4 {
-  margin-top: 0px;
-  text-align: center;
+#about {
+  height: 200px;
 }
 
-#myexperience h4 {
-  margin-top: 0px;
-  text-align: center;
+#experience {
+
 }
 
-#myeducation h4 {
-  margin-top: 0px;
-  text-align: center;
+#education {
+
 }
 
-#myprojects h4 {
-  margin-top: 0px;
-  text-align: center;
+#projects {
+
 }
 
-#myresume h4 {
-  margin-top: 0px;
-  text-align: center;
+#resume {
+
 }
 
-/* Images and others */
+/* Overwrite Materialize CSS */
+
+.page-footer {
+  margin-top: 0px !important;
+  padding-top: 20px !important;
+}
 
 .parallax-container {
   height: 150px;
