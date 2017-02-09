@@ -56,11 +56,21 @@ main {
   height: 200px;
 }
 
-#experience {
-
+#educationRow {
+  margin-bottom: 0;
+  padding: 5%;
 }
 
-#education {
+#experienceContent {
+  padding: 5%;
+}
+
+#itemLogoContainer {
+  max-height: 100px;
+  height: 100px;
+}
+
+#itemLogoContainer img {
 
 }
 
@@ -91,4 +101,12 @@ main {
 
 .parallax-container {
   height: 150px;
+}
+
+.waves-effect.waves-royal .waves-ripple {
+  background-color: #2979ff;
+}
+
+.collection {
+  border: 0px !important;
 }
