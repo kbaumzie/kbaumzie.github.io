@@ -18,16 +18,8 @@ body {
   flex-direction: column;
 }
 
-h4 {
-  text-align: center;
-}
-
 h5 {
   margin-top: 0px;
-}
-
-h6 {
-  text-align: center;
 }
 
 main {
@@ -37,9 +29,19 @@ main {
 /* Main sections of personal content */
 
 #introduction {
-  text-align: center;
+  /*text-align: center;*/
   padding: 2%;
   background-color: #F9F9FB;
+  /*margin: auto;*/
+}
+
+#introContent {
+  margin: 20px;
+}
+
+#introText {
+  display: inline-block !important;
+  /*margin: 10px 0 10px 0;*/
 }
 
 .tabs {
@@ -49,8 +51,9 @@ main {
 }
 
 #me {
-  height: 20%;
-  width: 20%;
+  height: 15%;
+  width: 15%;
+  margin-right: 20px;
 }
 
 #navicon-in {
@@ -70,11 +73,7 @@ main {
 
 .terminalRow {
   margin: 0 !important;
-  padding: 0 !important;
-}
-
-.padRow {
-  height: 100px;
+  padding: 100px 0 100px 0 !important;
 }
 
 #terminal {
@@ -82,11 +81,42 @@ main {
   background-color: #c09b9f;
   border: 3px solid #d3d3d3;
   border-radius: 5px;
-  border-top: 25px solid #d3d3d3;
 
   height: 100%;
   width: 50%;
+  padding: 0px;
+}
+
+#terminalContent {
   padding: 20px;
+}
+
+#windowOptions {
+  background-color: #d3d3d3;
+}
+
+.windowIcons {
+  border-radius: 50%;
+  border: 3px solid;
+  width: 10px;
+  height: 10px;
+  margin: 2px;
+  display: inline-block;
+}
+
+#close {
+  border-color: #fc635d;
+  background-color: #fc635d;
+}
+
+#minimize {
+  border-color: #fec041;
+  background-color: #fec041;
+}
+
+#maximize {
+  border-color: #35cc4b;
+  background-color: #35cc4b;
 }
 
 #education {
@@ -132,20 +162,6 @@ main {
 .itemLogoContainer {
   max-height: auto;
   width: 100%;
-}
-
-#projects {
-
-}
-
-#resume {
-  padding: 5%;
-}
-
-#resumeDescription {
-  font-style: italic;
-  padding-bottom: 2%;
-  margin-top: 0;
 }
 
 #footerContent {
