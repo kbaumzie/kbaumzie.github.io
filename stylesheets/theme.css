@@ -5,12 +5,6 @@
 
 /* HTML formatting */
 
-#wip {
-  position: fixed;
-  margin-top: 10px;
-  margin-left: 0px;
-}
-
 body {
   font-family: 'Raleway';
   display: flex;
@@ -36,12 +30,14 @@ main {
 }
 
 #introContent {
-  margin: 20px;
+  margin: auto;
+  width: 70%;
+  padding: 10px;
 }
 
 #introText {
   display: inline-block !important;
-  /*margin: 10px 0 10px 0;*/
+  /*margin-bottom: 20px;*/
 }
 
 .tabs {
@@ -162,6 +158,10 @@ main {
 .itemLogoContainer {
   max-height: auto;
   width: 100%;
+}
+
+#resume {
+  background-color: #043549;
 }
 
 #footerContent {
