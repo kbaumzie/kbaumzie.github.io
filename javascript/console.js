@@ -33,7 +33,7 @@ function makeConsole() {
     },
     {
       input: 'Kayla.hire_availability',
-      output: "['Fall 2017', 'Spring 2018', 'Summer 2019']"
+      output: 'Summer 2019'
     },
     {
       input: 'Kayla.contact_info',
