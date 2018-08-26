@@ -1,4 +1,11 @@
 <footer class="page-footer" id="footerContent">
+  <script>
+    function currYear() {
+      var d = new Date();
+      var n = d.getFullYear();
+      document.getElementById('current-year').innerHTML = n;
+    }
+  </script>
   <div class="container">
     <div class="row">
       <div class="col l6 s12">
@@ -19,7 +26,7 @@
   </div>
   <div class="footer-copyright">
     <div class="container">
-    © 2017 Copyright Kayla Nussbaum
+    © <span id="current-year"></span> Copyright Kayla Nussbaum
     </div>
   </div>
 </footer>
