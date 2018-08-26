@@ -18,15 +18,18 @@ function makeConsole() {
     },
     {
       input: 'Kayla.skills',
-      output: "['UI/UX', 'Technical Design', 'Project Management', 'Organization', 'Communication']"
+      output: "['UI/UX', 'Technical Design', 'Project Management', 'Organization', 'Front-end Development']"
     },
     {
       input: 'Kayla.programming',
-      output: "['Ruby', 'Python', 'HTML/CSS', 'JavaScript', 'SQL', 'Java']"
+      output: "['Ruby', 'Python', 'HTML/CSS', 'JavaScript', 'SQL', 'Java', 'C#']"
     },
     {
       input: 'Kayla.experience',
-      output: "[{'Constant Contact': {'Position': 'Software Engineer Intern', \
+      output: "[{'Intuit': {'Position': 'Software Engineer Co-op for TurboTax', \
+      'Location': 'San Diego, SC', 'Duration': 'January 2018 - July 2018'}}, \
+      {'Blackbaud': {'Position': 'Software Engineer Intern', 'Location': 'Charleston, SC', \
+      'Duration': 'May 2017 - August 2017'}}, {'Constant Contact': {'Position': 'Software Engineer Co-op', \
       'Location': 'Waltham, MA', 'Duration': 'January 2017 - May 2017'}}, {'General Electric': \
       {'Position': 'Technical Developer Intern', 'Location': 'Feasterville-Trevose, PA', \
       'Duration': 'June 2016 - August 2016'}}]"
@@ -37,7 +40,7 @@ function makeConsole() {
     },
     {
       input: 'Kayla.contact_info',
-      output: "{'Email': 'kxn3867@rit.edu', 'Cell': '(803)460-5591'}"
+      output: "{'Email': 'kxn3867@rit.edu', 'Cell': '(570)236-8299'}"
     }
   ];
 
