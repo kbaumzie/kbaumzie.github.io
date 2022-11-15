@@ -18,7 +18,7 @@ function makeConsole() {
     },
     {
       input: 'Kayla.skills',
-      output: "['UI/UX', 'Technical Design', 'Project Management', 'Organization', 'Front-end Development']"
+      output: "['UI/UX', 'Technical Design', 'Product Management', 'Organization', 'Front-end Development']"
     },
     {
       input: 'Kayla.programming',
@@ -35,12 +35,8 @@ function makeConsole() {
       'Duration': 'June 2016 - August 2016'}}]"
     },
     {
-      input: 'Kayla.hire_availability',
-      output: 'Summer 2019'
-    },
-    {
       input: 'Kayla.contact_info',
-      output: "{'Email': 'kxn3867@rit.edu', 'Cell': '(570)236-8299'}"
+      output: "{'Email': 'kayla.ann.nussbaum@gmail.com'}"
     }
   ];
 
