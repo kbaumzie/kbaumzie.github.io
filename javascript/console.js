@@ -41,42 +41,61 @@ function makeConsole() {
   ];
 
   var terminalbody = document.getElementById('terminalContent');
-  var index = 0;
 
-  var interval = setInterval(function() {
-    writeInput(commands[index].input);
-    writeOutput(commands[index].output);
-    index++;
-
-    if (index === commands.length) {
-      clearInterval(interval);
+  async function runCommands() {
+    for (let i = 0; i < commands.length; i++) {
+      writePrompt();
+      await waitBetweenCommands();
+      await writeInput(commands[i].input);
+      await waitBeforePrintingOutput();
+      writeOutput(commands[i].output);
     }
-  }, 1000);
+  }
 
-  function writeInput (str) {
+  function randomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min)
+  }
+
+  async function waitBetweenCommands() {
+    return new Promise((resolve) => {
+      setTimeout(resolve, randomInt(1000, 2200));
+    });
+  }
+
+  async function waitBeforePrintingOutput() {
+    return new Promise((resolve) => {
+      setTimeout(resolve, randomInt(150, 400));
+    });
+  }
+
+  function writePrompt() {
     var d = (new Date()).toTimeString();
-    var path = ' - $ ';
+    var path = ' $ ';
     var dateStr = document.createElement('p');
     var pathStr = document.createElement('p');
     var inputStr = document.createElement('p');
     var dateContent = document.createTextNode(d);
     var pathContent = document.createTextNode(path);
-    var inputContent = document.createTextNode(str);
 
     dateStr.style.color = '#b6f97a';
     pathStr.style.color = '#7af6f9';
 
     dateStr.style.display = "inline";
     pathStr.style.display = "inline";
-    inputStr.style.display = "inline";
 
     dateStr.appendChild(dateContent);
     pathStr.appendChild(pathContent);
-    inputStr.appendChild(inputContent);
 
     terminalbody.appendChild(dateStr);
     terminalbody.appendChild(pathStr);
+  }
+
+  async function writeInput (str) {
+    var inputStr = document.createElement('p');
+    inputStr.style.display = "inline";
     terminalbody.appendChild(inputStr);
+
+    await typeStringInElement(str, inputStr);
   }
 
   function writeOutput (str) {
@@ -86,4 +105,20 @@ function makeConsole() {
     terminalbody.appendChild(typeOutputString);
   }
 
+  async function typeStringInElement(str, element) {
+    for (let i = 0; i < str.length; i++) {
+      await typeCharacterInElement(str[i], element);
+    }
+  }
+
+  async function typeCharacterInElement(character, element) {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        element.innerText = element.innerText + character;
+        resolve();
+      }, 100);
+    });
+  }
+
+  runCommands();
 }
