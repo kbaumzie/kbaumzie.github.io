@@ -6,11 +6,7 @@ function makeConsole() {
     },
     {
       input: 'Kayla.education',
-      output: 'Rochester Institute of Technology'
-    },
-    {
-      input: 'Kayla.graduation',
-      output: 'May, 2019'
+      output: "['Stanford University (2022)', 'Rochester Institute of Technology (2014)']"
     },
     {
       input: 'Kayla.degree',
@@ -18,16 +14,20 @@ function makeConsole() {
     },
     {
       input: 'Kayla.skills',
-      output: "['UI/UX', 'Technical Design', 'Product Management', 'Organization', 'Front-end Development']"
+      output: "['UI/UX', 'Technical Design', 'Product Management', 'Front-end Development']"
     },
     {
       input: 'Kayla.programming',
-      output: "['Ruby', 'Python', 'HTML/CSS', 'JavaScript', 'SQL', 'Java', 'C#']"
+      output: "['JavaScript/React', 'Ruby', 'Python', 'HTML/CSS', 'SQL', 'Java', 'C#']"
     },
     {
       input: 'Kayla.experience',
-      output: "[{'Intuit': {'Position': 'Software Engineer Co-op for TurboTax', \
-      'Location': 'San Diego, SC', 'Duration': 'January 2018 - July 2018'}}, \
+      output: "[{'Intuit': [{'Position': 'Product Manager 2 for Intuit Developer Experiences', \
+      'Location': 'Mountain View, CA', 'Duration': 'June 2021 - current'], \
+      [{'Position': 'Software Engineer 1 & 2 for Intuit Platform', \
+      'Location': 'Mountain View, CA', 'Duration': 'August 2019 - June 2021'], \
+      [{'Position': 'Software Engineer Co-op for TurboTax', \
+      'Location': 'San Diego, CA', 'Duration': 'January 2018 - July 2018'}]}, \
       {'Blackbaud': {'Position': 'Software Engineer Intern', 'Location': 'Charleston, SC', \
       'Duration': 'May 2017 - August 2017'}}, {'Constant Contact': {'Position': 'Software Engineer Co-op', \
       'Location': 'Waltham, MA', 'Duration': 'January 2017 - May 2017'}}, {'General Electric': \
@@ -41,42 +41,61 @@ function makeConsole() {
   ];
 
   var terminalbody = document.getElementById('terminalContent');
-  var index = 0;
 
-  var interval = setInterval(function() {
-    writeInput(commands[index].input);
-    writeOutput(commands[index].output);
-    index++;
-
-    if (index === commands.length) {
-      clearInterval(interval);
+  async function runCommands() {
+    for (let i = 0; i < commands.length; i++) {
+      writePrompt();
+      await waitBetweenCommands();
+      await writeInput(commands[i].input);
+      await waitBeforePrintingOutput();
+      writeOutput(commands[i].output);
     }
-  }, 1000);
+  }
 
-  function writeInput (str) {
+  function randomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min)
+  }
+
+  async function waitBetweenCommands() {
+    return new Promise((resolve) => {
+      setTimeout(resolve, randomInt(1000, 2200));
+    });
+  }
+
+  async function waitBeforePrintingOutput() {
+    return new Promise((resolve) => {
+      setTimeout(resolve, randomInt(150, 400));
+    });
+  }
+
+  function writePrompt() {
     var d = (new Date()).toTimeString();
-    var path = ' - $ ';
+    var path = ' $ ';
     var dateStr = document.createElement('p');
     var pathStr = document.createElement('p');
     var inputStr = document.createElement('p');
     var dateContent = document.createTextNode(d);
     var pathContent = document.createTextNode(path);
-    var inputContent = document.createTextNode(str);
 
     dateStr.style.color = '#b6f97a';
     pathStr.style.color = '#7af6f9';
 
     dateStr.style.display = "inline";
     pathStr.style.display = "inline";
-    inputStr.style.display = "inline";
 
     dateStr.appendChild(dateContent);
     pathStr.appendChild(pathContent);
-    inputStr.appendChild(inputContent);
 
     terminalbody.appendChild(dateStr);
     terminalbody.appendChild(pathStr);
+  }
+
+  async function writeInput (str) {
+    var inputStr = document.createElement('p');
+    inputStr.style.display = "inline";
     terminalbody.appendChild(inputStr);
+
+    await typeStringInElement(str, inputStr);
   }
 
   function writeOutput (str) {
@@ -86,4 +105,20 @@ function makeConsole() {
     terminalbody.appendChild(typeOutputString);
   }
 
+  async function typeStringInElement(str, element) {
+    for (let i = 0; i < str.length; i++) {
+      await typeCharacterInElement(str[i], element);
+    }
+  }
+
+  async function typeCharacterInElement(character, element) {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        element.innerText = element.innerText + character;
+        resolve();
+      }, 100);
+    });
+  }
+
+  runCommands();
 }
