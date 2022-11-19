@@ -6,11 +6,7 @@ function makeConsole() {
     },
     {
       input: 'Kayla.education',
-      output: 'Rochester Institute of Technology'
-    },
-    {
-      input: 'Kayla.graduation',
-      output: 'May, 2019'
+      output: "['Stanford University (2022)', 'Rochester Institute of Technology (2014)']"
     },
     {
       input: 'Kayla.degree',
@@ -18,16 +14,20 @@ function makeConsole() {
     },
     {
       input: 'Kayla.skills',
-      output: "['UI/UX', 'Technical Design', 'Product Management', 'Organization', 'Front-end Development']"
+      output: "['UI/UX', 'Technical Design', 'Product Management', 'Front-end Development']"
     },
     {
       input: 'Kayla.programming',
-      output: "['Ruby', 'Python', 'HTML/CSS', 'JavaScript', 'SQL', 'Java', 'C#']"
+      output: "['JavaScript/React', 'Ruby', 'Python', 'HTML/CSS', 'SQL', 'Java', 'C#']"
     },
     {
       input: 'Kayla.experience',
-      output: "[{'Intuit': {'Position': 'Software Engineer Co-op for TurboTax', \
-      'Location': 'San Diego, SC', 'Duration': 'January 2018 - July 2018'}}, \
+      output: "[{'Intuit': [{'Position': 'Product Manager 2 for Intuit Developer Experiences', \
+      'Location': 'Mountain View, CA', 'Duration': 'June 2021 - current'], \
+      [{'Position': 'Software Engineer 1 & 2 for Intuit Platform', \
+      'Location': 'Mountain View, CA', 'Duration': 'August 2019 - June 2021'], \
+      [{'Position': 'Software Engineer Co-op for TurboTax', \
+      'Location': 'San Diego, CA', 'Duration': 'January 2018 - July 2018'}]}, \
       {'Blackbaud': {'Position': 'Software Engineer Intern', 'Location': 'Charleston, SC', \
       'Duration': 'May 2017 - August 2017'}}, {'Constant Contact': {'Position': 'Software Engineer Co-op', \
       'Location': 'Waltham, MA', 'Duration': 'January 2017 - May 2017'}}, {'General Electric': \
