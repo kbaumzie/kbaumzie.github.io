@@ -36,7 +36,7 @@ function makeConsole() {
     },
     {
       input: 'Kayla.contact_info',
-      output: "{'Email': 'kayla.ann.nussbaum@gmail.com'}"
+      output: "{'Email': 'x'}"
     }
   ];
 
