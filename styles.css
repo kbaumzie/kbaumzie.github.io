@@ -86,7 +86,6 @@ header {
     background-color: #fffafc;
     position: sticky;
     top: 0;
-    /*z-index: 1000;*/
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
@@ -198,14 +197,6 @@ header {
     }
 }
 
-/* .sparkle-pulse {
-    position: absolute;
-    font-size: 3.5rem;
-    color: white;
-    animation: sparklePulse 2.5s ease-in-out forwards;
-    opacity: 0;
-} */
-
 .sparkle-top-left {
     top: -2rem;
     left: -3.5rem;
@@ -214,23 +205,7 @@ header {
 .sparkle-bottom-right {
     bottom: -1.6rem;
     right: -4.2rem;
-}
-
-/* @keyframes sparklePulse {
-    0% {
-    transform: scale(0.5) rotate(0deg);
-    opacity: 0;
-    }
-    50% {
-    transform: scale(1.2) rotate(15deg);
-    opacity: 1;
-    }
-    100% {
-    transform: scale(1) rotate(0deg);
-    opacity: 1;
-    }
-} */
-  
+} 
 
 .hero {
     display: flex;
@@ -482,7 +457,7 @@ header {
     position: sticky;
     top: 2rem;
     align-self: flex-start;
-    max-width: 250px; /* keep your original sizing */
+    max-width: 250px;
     display: flex;
     justify-content: center;
     overflow: hidden;

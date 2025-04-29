@@ -13,8 +13,8 @@ if (!window.sparkleInitialized) {
         const yOffset = Math.random() * 30 - 15;
   
         star.className = 'star';
-        star.style.top = `${e.clientY + yOffset}px`; // FIXED: clientY
-        star.style.left = `${e.clientX + xOffset}px`; // FIXED: clientX
+        star.style.top = `${e.clientY + yOffset}px`;
+        star.style.left = `${e.clientX + xOffset}px`;
   
         document.body.appendChild(star);
   
