@@ -64,15 +64,30 @@ document.addEventListener("DOMContentLoaded", () => {
       const link = e.target.closest("a[data-nav]");
       if (link) {
         e.preventDefault();
-        const path = link.getAttribute('href').replace('/', ''); // Remove the '/' from the href
-        window.history.pushState({ path }, '', `/${path}`);  // Update the URL without reloading the page
-        loadPageContent(path);
 
+        const path = link.getAttribute('href').replace('/', ''); // Remove the '/' from the href
         const menuToggle = document.getElementById('menu-toggle');
+
+        // window.history.pushState({ path }, '', `/${path}`);  // Update the URL without reloading the page
+        // loadPageContent(path);
   
-        // Close the mobile menu after a link is clicked
+        // // Close the mobile menu after a link is clicked
+        // if (menuToggle.checked) {
+        //   menuToggle.checked = false;
+        // }
+
         if (menuToggle.checked) {
+          // Uncheck first to collapse menu
           menuToggle.checked = false;
+    
+          // Delay content load slightly to let animation play
+          setTimeout(() => {
+            window.history.pushState({ path }, '', `/${path}`);
+            loadPageContent(path);
+          }, 300); // adjust to match your CSS transition duration
+        } else {
+          window.history.pushState({ path }, '', `/${path}`);
+          loadPageContent(path);
         }
       }
     });
