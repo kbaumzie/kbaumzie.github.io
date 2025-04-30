@@ -37,19 +37,51 @@ h4, p {
 html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+/* Prevent overflow on mobile */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+  
+h1, h2, p {
+    overflow-wrap: break-word;
 }
 
 body {
+    max-width: 100%;
     margin: 0;
     font-family: 'gt', 'Raleway', sans-serif;
-    background: linear-gradient(135deg, rgba(164, 80, 139, 0.2), rgba(95, 10, 135, 0.2), rgba(254, 180, 123, 0.2), rgba(67, 206, 162, 0.2));
-    background-attachment: fixed;
+    /* background: linear-gradient(135deg, rgba(164, 80, 139, 0.2), rgba(95, 10, 135, 0.2), rgba(254, 180, 123, 0.2), rgba(67, 206, 162, 0.2));
+    background-attachment: fixed; */
     color: #333;
     overflow-x: hidden;
     position: relative;
     flex: 1;
     display: flex;
     flex-direction: column;
+}
+
+/* Body background gradient, layers the gradient behind all content and avoids mobile rendering bugs */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    background: linear-gradient(
+      135deg,
+      rgba(164, 80, 139, 0.2),
+      rgba(95, 10, 135, 0.2),
+      rgba(254, 180, 123, 0.2),
+      rgba(67, 206, 162, 0.2)
+    );
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 /* Fading + sliding down animation */
@@ -78,6 +110,7 @@ body {
 .fade-delay-6 { animation-delay: 1.2s; }
 .fade-delay-7 { animation-delay: 1.4s; }
 
+/* Navbar */
 header {
     display: flex;
     justify-content: center;
@@ -105,9 +138,10 @@ header {
 /* Menu Icon */
 .menu-icon {
     display: none;
-    font-size: 1.8rem;
+    font-size: 2.4rem;
     cursor: pointer;
     color: #2e023c;
+    margin-left: 1rem;
 }
   
 /* Navbar */
@@ -258,6 +292,10 @@ header {
     opacity: 1;
 }
 
+.mantra-img {
+    width: 400px;
+}
+
 .social-links {
     display: flex;
     gap: 2rem;
@@ -280,6 +318,24 @@ header {
 
     .social-links {
         justify-content: flex-start; /* align left on larger screens if needed */
+    }
+}
+
+@media (max-width: 767px) {
+    .hero {
+      padding: 1.5rem 1rem;
+    }
+  
+    .hero-text {
+      margin-left: 0; /* remove left margin on mobile */
+    }
+  
+    .hero h1 {
+      font-size: 2.2rem;
+    }
+  
+    .hero h2 {
+      font-size: 1.5rem;
     }
 }
   
@@ -315,6 +371,14 @@ header {
 }
 
 /* Work Page */
+.mobile-divider {
+    display: none;
+    border: none;
+    border-top: 1px solid #707070;
+    width: 100%;
+    margin-top: 2rem
+}
+
 .info-cards {
     display: flex;
     justify-content: center;
@@ -330,7 +394,7 @@ header {
     background-color: #fffafc;
     border-radius: 2rem;
     padding: 2rem;
-    width: 380px;
+    width: 400px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
     text-align: center;
     position: relative;
@@ -358,6 +422,15 @@ header {
         flex-direction: column;
         align-items: center;
     }
+
+    /* hide sparkle on mobile */
+    .info-card h2::before {
+        display: none;
+    }
+
+    .mobile-divider {
+        display: block;
+    }
 }
   
 .info-card:hover {
@@ -376,7 +449,7 @@ header {
 .info-card h2::before {
     content: '✦';
     position: absolute;
-    left: 7rem;
+    left: 5.3rem;
     top: 0;
     color: #ffc8e2;
     font-size: 1.3rem;
@@ -702,12 +775,11 @@ header {
 
 .businesses-section {
     margin: 0 auto;
-    padding: 0 2rem;
 }
 
 .business-card {
     width: 100%;
-    max-width: 380px;
+    max-width: 400px;
     background-color: #fffafc;
     text-align: center;
     animation: fadeBounce 0.8s ease-out;
@@ -823,7 +895,7 @@ header {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 10rem;
+    gap: 4rem;
     text-align: left;
     align-items: center;
     padding: 1.5rem 2rem;
@@ -832,7 +904,7 @@ header {
 .footer-left,
 .footer-right {
     flex: 1;
-    min-width: 450px;
+    min-width: 0;
 }
   
 .footer-right {
@@ -871,6 +943,40 @@ header {
     margin: 1rem 0 0 0;
     padding: 0.4rem 0;
     background-color: #f1e1e9;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 2rem; /* reduced gap on mobile */
+      text-align: left;
+}
+  
+.footer-left,
+.footer-right {
+      min-width: unset;
+      width: 100%;
+      text-align: left;
+}
+  
+.footer-nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+}
+  
+.footer-nav ul li {
+      margin-bottom: 0.5rem;
+}
+  
+.footer-right {
+      text-align: left;
+}
+  
+.footer-social-links {
+      justify-content: flex-start;
+}
 }
 
 .error-page {
