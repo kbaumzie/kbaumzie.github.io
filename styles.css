@@ -109,6 +109,8 @@ body::before {
 .fade-delay-5 { animation-delay: 1s; }
 .fade-delay-6 { animation-delay: 1.2s; }
 .fade-delay-7 { animation-delay: 1.4s; }
+.fade-delay-8 { animation-delay: 1.6s; }
+.fade-delay-9 { animation-delay: 1.8s; }
 
 /* Navbar */
 header {
@@ -172,7 +174,7 @@ header {
     color: #fff;
     transition: background-color 0.3s ease;
 }
-  
+
 /* Responsive */
 #menu-toggle {
     display: none;

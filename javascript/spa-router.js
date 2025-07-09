@@ -68,15 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const path = link.getAttribute('href').replace('/', ''); // Remove the '/' from the href
         const menuToggle = document.getElementById('menu-toggle');
 
-        // window.history.pushState({ path }, '', `/${path}`);  // Update the URL without reloading the page
-        // loadPageContent(path);
-  
-        // // Close the mobile menu after a link is clicked
-        // if (menuToggle.checked) {
-        //   menuToggle.checked = false;
-        // }
-
-        if (menuToggle.checked) {
+        if (menuToggle && menuToggle.checked) {
           // Uncheck first to collapse menu
           menuToggle.checked = false;
     
