@@ -75,8 +75,8 @@ body::before {
     z-index: -1;
     background: linear-gradient(
       to bottom,
-      rgba(215, 113, 35, 0.3),
-      rgba(111, 25, 150, 0.3)
+      rgba(215, 113, 35, 0.15),
+      rgba(111, 25, 150, 0.12)
     );
     background-size: cover;
     background-repeat: no-repeat;
@@ -277,7 +277,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
+    gap: 3rem;
 }
 
 .hero h1 {
@@ -484,8 +484,9 @@ header {
     position: relative;
     font-family: 'Whimsy', serif;
 }
-  
-.info-card h2::before {
+
+
+/* .info-card h2::before {
     content: '✦';
     position: absolute;
     left: 5.3rem;
@@ -496,7 +497,6 @@ header {
     filter: drop-shadow(0 0 2px #fff2f6);
 }
   
-/* Sparkle rotation */
 @keyframes sparkleSpin {
     0% {
       transform: rotate(0deg) scale(1);
@@ -510,7 +510,7 @@ header {
       transform: rotate(360deg) scale(1);
       opacity: 1;
     }
-}
+} */
   
 .info-card ul {
     list-style: none;
@@ -836,75 +836,6 @@ header {
     text-align: center;
     animation: fadeBounce 0.8s ease-out;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-  
-.location-text {
-    font-size: 1.1rem;
-    color: var(--text-color);
-    max-width: 300px;
-}
-  
-.contact-page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0 5rem 2rem 5rem;
-}
-  
-.contact-content {
-    max-width: 1100px;
-    width: 100%;
-}
-  
-.contact-inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
-    max-width: 1100px;
-    width: 100%;
-    margin: 0 auto;
-}
-  
-.contact-text {
-    flex: 1 1 auto;
-    min-width: 0;
-}
-
-.contact-text p {
-    max-width: 100%;
-}
-
-.contact-image {
-    flex: 0 0 auto;
-}
-  
-.contact-image img {
-    width: 250px;
-    max-width: 100%;
-    height: auto;
-    border-radius: 1rem;
-}
-  
-.location-text {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-    text-align: left;
-}
-  
-@media (max-width: 768px) {
-    .contact-inner {
-        flex-direction: column;
-        text-align: center;
-    }
-  
-    .location-text {
-        text-align: center;
-    }
-
-    .contact-image img {
-        width: 150px;
-    }
 }
 
 /* Sparkle Cursor */
